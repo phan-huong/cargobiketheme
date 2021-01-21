@@ -1,0 +1,47 @@
+/* Custom styles */
+/* Index
+01. PW WooCommerce Gift Cards Pro
+*/
+
+/* 01. PW WooCommerce Gift Cards Pro */
+.cbt_single_product_wrapper #pwgc-message {
+    width: 100%!important;
+    display: inline-block!important;
+}
+.cbt_single_product_wrapper #pwgc-custom-amount, 
+.cbt_single_product_wrapper .pwgc-input-text,
+.cbt_single_product_wrapper #pwgc-message,
+.cbt_single_product_wrapper .quantity > input[type=number] {
+    width: 100%!important;
+    font-size: 1em;
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    padding: 0.4em;
+}
+.cbt_single_product_wrapper .pwgc-input-text:hover, 
+.cbt_single_product_wrapper .pwgc-input-text:hover,
+.cbt_single_product_wrapper #pwgc-message:hover,
+.cbt_single_product_wrapper .quantity > input[type=number]:hover {
+    transition: 0.5s;
+    border: 1px solid rgb(97, 138, 73);
+}
+.cbt_single_product_wrapper .pwgc-label {
+    display: none!important;
+}
+.cbt_single_product_wrapper .pwgc-subtitle {
+    font-size: 0.8em;
+}
+.cbt_single_product_wrapper .quantity {
+    display: inline-block;
+}
+.cbt_single_product_wrapper .quantity > input[type=number] {
+    width: 5em;
+}
+.cbt_single_product_wrapper .single_add_to_cart_button {
+    background-color: rgb(97, 138, 73);
+    color: rgb(255,255,255);
+    border: 2px solid rgb(97, 138, 73);
+    border-radius: 2em;
+    font-weight: bold;
+    padding: .4rem 1.2rem;
+}

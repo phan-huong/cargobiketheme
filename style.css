@@ -1,0 +1,1356 @@
+/*
+Theme Name: Cargo Bike Theme
+Theme URI: https://phanhuong.com/
+Author: Ngoc Huong Phan
+Author URI: https://phanhuong.com/
+Description: Custom theme for CargoBike Adventures
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.6
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cargobiketheme
+*/
+
+/* Index
+01. GLOBAL
+02. HEADER
+    02a. NAVIGATION BAR
+    02b. SLIDER / VIDEO
+03. FOOTER
+    03a. Banner
+    03b. Footer bar
+04. PAGES
+    04a. FRONT PAGE / HOME PAGE
+        04a.1. Notice text
+        04a.2. Introduction
+        04a.3. Offer services
+        04a.4. E-Bike
+        04a.5. Accessories
+        04a.6. Special features
+        04a.7. Premium services
+    04b. GOOD-TO-KNOW PAGE
+    04c. COUPONS PAGE
+    04d. CONTACT PAGE
+    04e. LEGAL / INFORMATION PAGES
+05. WOOCOMMERCE
+    05a. Single product
+    05b. Checkout
+06. RESPONSIVE WITH BOOTSTRAP
+    06a. Screen < 1200px
+    06b. Screen < 992px
+    06c. Screen < 768px
+    06d. Screen < 576px
+    06e. Screen <= 480px
+    06f. Screen <= 320px
+*/
+
+/* 01. GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body * {
+    font-family: 'Raleway', sans-serif;
+}
+.wicked_bkgr {
+    background: url('assets/img/sativa_edited2.png') repeat;
+}
+.page_wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.margin_to_top {
+    margin-top: 6em;
+}
+.page_wrapper > .section_wrapper:not(:first-child) {
+    padding: 2em 0 4em 0;
+}
+.page_wrapper > .section_wrapper:not(:last-child) {
+    border-bottom: 1px dashed lightgray;
+}
+.page_wrapper > .section_wrapper:first-child {
+    border-bottom: 0;
+}
+.section_wrapper > .container > h1 {
+    font-size: 200%;
+}
+.section_wrapper .section_title {
+    width: 100%;
+    padding: 0.5em 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+.section_wrapper .section_excerpt {
+    width: 100%;
+    padding: 0 0 1em 0;
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+.badge.social, .badge.social_small {
+    margin: 0 5px 20px 0;
+    padding: 0;
+    background: #ccc;
+    color: white;
+    text-align: center;
+}
+.badge.social {
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    line-height: 42px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.badge.social_small {
+    font-size: 1.6em;
+    height: 1.6em;
+    width: 1.6em;
+    line-height: 1.7em;
+    -webkit-border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    border-radius: 0.8em;
+}
+.badge.social.twitter:hover, .badge.social_small.twitter:hover {
+    background: #55acee!important;
+}
+.badge.social.twitter_on, .badge.social_small.twitter_on {
+    background: #7d858b!important;
+}
+.badge.social.facebook:hover, .badge.social_small.facebook:hover {
+    background: #3b5998!important;
+}
+.badge.social.facebook_on, .badge.social_small.facebook_on {
+    background: #3b5998!important;
+}
+.badge.social.instagram:hover, .badge.social_small.instagram:hover {
+    background: pink!important;
+}
+.badge.social.instagram_on, .badge.social_small.instagram_on {
+    background: pink!important;
+}
+.badge.social.gplus:hover, .badge.social_small.gplus:hover {
+    background: #db4b39!important;
+}
+.badge.social.gplus_on, .badge.social_small.gplus_on {
+    background: #db4b39!important;
+}
+.badge.social.paypal:hover, .badge.social_small.paypal:hover {
+    background: #3b7bbf!important;
+}
+.badge.social.paypal_on, .badge.social_small.paypal_on {
+    background: #3b7bbf!important;
+}
+.badge.social.euro:hover, .badge.social_small.euro:hover {
+    background: #626262!important;
+}
+.badge.social.euro_on, .badge.social_small.euro_on {
+    background: #626262!important;
+}
+
+/* 02. HEADER */
+/* 02a. NAVIGATION BAR */
+nav {
+    background-color: rgb(52, 58, 64, 0.9);
+}
+.navbar {
+    padding: 0 1rem!important;
+}
+.nav_brand_container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0.8em;
+    width: 100%;
+}
+.navbar-brand {
+    font-size: 1.65em;
+    font-weight: bold;
+    color: rgb(97, 138, 73)!important;
+    margin-right: 0!important;
+}
+.navbar-brand > img {
+    max-width: 1.5em;
+}
+#menu-hauptmenue li.current-menu-item {
+    border-bottom: 3px solid rgb(97, 138, 73);
+}
+#menu-hauptmenue li a {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.7);
+}
+#menu-hauptmenue li a:hover {
+    color: rgb(97, 138, 73);
+    transition: .5s;
+}
+#menu-hauptmenue li.current-menu-item a {
+    color: rgb(97, 138, 73);
+}
+.navbar_toggler_container {
+    box-sizing: border-box;
+    padding: .6rem 0 .3125rem 0;
+}
+.navbar-toggler {
+    background-color: none;
+    color: rgba(255,255,255,.7)!important;
+    border: 2px solid rgb(97, 138, 73)!important;
+    border-radius: 2em;
+    padding: .25rem 1.8rem!important;
+}
+.navbar-toggler:hover {
+    background-color: rgb(97, 138, 73);
+}
+.navbar-toggler:focus {
+    background-color: rgb(97, 138, 73);
+    outline: none!important;
+}
+/* 02b. SLIDER / VIDEO */
+#hero {
+    height: 50vw;
+    overflow: hidden;
+    /* min-height: 500px; */
+    position: relative;
+    width: 100%;
+    color: var(--brand-white);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    padding:0;
+    margin-bottom: 40px;
+}
+.hero_container {
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+.hero_container > img {
+    filter: brightness(50%);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+#hero .carousel-caption {
+    bottom: 40%!important;
+    left: 20%!important;
+    right: 20%!important;
+    /* background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1em; */
+}
+.hero_caption > h1 {
+    font-size: 300%;
+    font-weight: bold;
+    margin: 20px;
+}
+.hero_caption > h1 > span {
+    color: rgb(97, 138, 73);
+    text-shadow: 2px 2px rgb(43, 62, 32);
+}
+.hero_caption a {
+    background-color: rgb(97, 138, 73);
+    color: rgb(255,255,255);
+    border: 2px solid rgb(97, 138, 73);
+    border-radius: 2em;
+    font-weight: bold;
+    padding: .8rem 1.8rem!important;
+    text-decoration: none;
+}
+.hero_caption a:hover {
+    border: 2px solid rgb(255,255,255);
+    background-color: rgb(82, 117, 62);
+}
+#hero video {
+    filter: brightness(50%);
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: -40px;
+}
+
+/* 03. FOOTER */
+/* 03a. Banner */
+#footer_banner {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+}
+/* .footer_banner_bkgr {
+    background: url('assets/img/epic2-lg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+.footer_banner_wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 8em 0;
+    margin: 0;
+}
+.footer_banner_wrapper a {
+    background-color: rgb(97, 138, 73);
+    color: rgb(255,255,255);
+    border: 2px solid rgb(97, 138, 73);
+    border-radius: 2em;
+    font-weight: bold;
+    padding: .8rem 1.8rem!important;
+    text-decoration: none;
+}
+.footer_banner_wrapper > h3 {
+    text-shadow: 2px 2px rgb(43, 62, 32);
+    margin-bottom: 1em;
+}
+.footer_banner_wrapper > a:hover {
+    border: 2px solid rgb(255,255,255);
+    background-color: rgb(82, 117, 62);
+}
+
+/* 03b. Footer bar */
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 2rem 1rem 1rem 1rem;
+}
+.footer_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1em;
+    color: rgb(202, 202, 202);
+    margin: 0;
+    padding: 0;
+}
+.footer_wrapper > div {
+    font-size: 85%;
+}
+.footer_wrapper > div > p {
+    margin-bottom: 0;
+    line-height: 1.6em;
+}
+.footer_wrapper > div > p > .badge.social {
+    margin: 0 5px 0 0;
+}
+.footer_wrapper  > .address {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+.footer_wrapper  > .contact_info {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+.footer_wrapper  > .footer_menu {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+.footer_wrapper  > .payment_method {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+.footer_wrapper  > .social_network {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+.footer_nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6em;
+}
+.footer_nav > ul > li > a, .contact_info > p a {
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+}
+.footer_nav > ul > li > a:hover, .contact_info > p a:hover {
+    text-decoration: underline;
+    color: rgb(97, 138, 73);
+}
+
+
+/* 04. PAGES*/
+/* 04a. FRONT PAGE / HOME PAGE */
+/* 04a.1. Notice text */
+.front_page_alert {
+    font-size: 80%;
+}
+
+/* 04a.2. Introduction */
+.intro_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
+    gap: 2em;
+}
+.intro_wrapper > .intro_text_title {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    /* font-size: 150%; */
+    font-weight: bold;
+}
+.intro_wrapper > .intro_text_content {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: justify;
+}
+.intro_wrapper > .intro_social_links {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.intro_wrapper > .intro_slider {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+/* 04a.3. Offer services */
+.offer_services_wrapper {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.offer_services_wrapper > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 3em auto;
+    /* background-color: #db4b39; */
+    border-radius: 0.5em;
+    border: 1px dotted transparent;
+    text-align: center;
+}
+.offer_services_wrapper > div:hover {
+    border: 1px solid rgb(97, 138, 73);
+    transition: 0.5s;
+}
+.offer_services_wrapper > div > p:first-child {
+    margin: 0;
+    padding: 0;
+}
+.offer_services_wrapper > div > p:nth-child(2) {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(97, 138, 73);
+    font-size: 1em;
+    line-height: 1em;
+}
+.offer_services_wrapper > div > p:not(:first-child) {
+    margin: 0;
+    padding: 0.5em
+}
+.offer_services_wrapper > div > p img {
+    background-color: rgb(97, 138, 73);
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+.offer_service1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+.offer_service2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+.offer_service3 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+.offer_service4 {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+}
+.offer_service5 {
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+}
+
+/* 04a.4. E-Bike */
+#custCarousel .carousel-inner {
+    border-radius: 0.5em;
+}
+#custCarousel .carousel-inner img {
+    width: 100%;
+    height: 100%
+}
+#custCarousel .carousel-indicators {
+    position: static;
+    margin-top: 0
+}
+#custCarousel .carousel-indicators>li {
+    width: 7em
+}
+#custCarousel .carousel-indicators li img {
+    border-radius: 0.2em;
+    display: block;
+    opacity: 0.7
+}
+#custCarousel .carousel-indicators li.active img {
+    opacity: 1
+}
+#custCarousel .carousel-indicators li:hover img {
+    opacity: 0.85
+}
+.carousel-item img {
+    width: 80%
+}
+.ebike_description_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin: 6em 0 0 0;
+    padding: 0;
+}
+.ebike_description_content > h5, .ebike_price_list > h5 {
+    text-align: center;
+}
+.ebike_description_content > p {
+    text-align: justify;
+}
+.ebike_price_list > table {
+    width: 100%;
+}
+.ebike_price_list > table * {
+    text-align: center;
+}
+.ebike_price_list > table th, .ebike_price_list > table td {
+    border: 1px solid rgb(255, 255, 255);
+}
+.ebike_price_list > table th {
+    background-color: rgb(97, 138, 73);
+    color: rgb(255,255,255);
+}
+.ebike_price_list > table tr:nth-child(even) > td {
+    background-color: rgb(229, 246, 219);
+}
+.ebike_price_list > table tr:nth-child(odd) > td {
+    background-color: rgb(215, 226, 207);
+}
+.ebike_price_list > table tr:first-child th:first-child {
+    border-radius: 0.5em 0 0 0;
+}
+.ebike_price_list > table tr:first-child th:last-child {
+    border-radius: 0 0.5em 0 0;
+}
+.ebike_price_list > table tr:last-child td:last-child {
+    border-radius: 0 0 0.5em 0;
+}
+.ebike_price_list > table tr:last-child td:first-child {
+    border-radius: 0 0 0 0.5em;
+}
+.ebike_price_notice {
+    margin-top: 0.5em;
+    font-size: 85%;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* 04a.5. Accessories */
+.accessories_wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+.accessories_item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2.4em 1.7em 0;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.accessories_item_img > img {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+}
+.accessories_item_title {
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1em;
+    padding: 0.2em;
+    text-transform: uppercase;
+}
+.accessories_item_buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.1em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    border-top: 1px solid rgb(97, 138, 73);
+}
+.accessories_item_buttons > span, .accessories_item_buttons > button {
+    font-size: 0.9em;
+    line-height: 0.9em;
+    padding: 0.4em 0;
+}
+.accessories_item_buttons > span {
+    text-align: left;
+}
+.accessories_item_buttons > button {
+    background-color: rgb(97, 138, 73);
+    border: 0;
+    border-radius: 0 0 0.3em 0.3em;
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+.accessories_item_description {
+    display: none;
+}
+#accessoriesModal .modal-header, #accessoriesModal .modal-footer {
+    padding: 0.5em !important;
+}
+#accessoriesModal .modal-header {
+    border-bottom: 0 !important;
+}
+#accessoriesModal .modal-footer > button {
+    padding: 0.25em 0.5em!important;
+}
+#accessoriesModal .modal-body {
+    padding: 1em;
+}
+#accessoriesModal .modal-body > img {
+    width: 100%;
+    border-radius: 0.5em;
+}
+#accessoriesModalDesc {
+    margin-top: 1em;
+    text-align: justify;
+}
+
+/* 04a.7. Premium services */
+.premium_service_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 2em;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+.premium_service_wrapper > div {
+    display: grid;
+    grid-template-rows: 7em auto;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 1px dotted lightgray;
+    border-radius: 0.5em;
+}
+.premium_service_wrapper > div:hover {
+    border: 1px solid rgb(97, 138, 73);
+    box-shadow: 2px 2px rgb(43, 62, 32);
+    transition: 0.5s;
+}
+.premium_service_wrapper > div > p:first-child {
+    margin: 0;
+    padding: 0.5em;
+}
+.premium_service_wrapper > div > p:first-child > img {
+    width: 6em;
+    height: 6em;
+}
+.premium_service_wrapper > div > p:last-child {
+    margin: 0;
+    padding: 0.5em;
+}
+
+/* 04d. CONTACT PAGE*/
+.contact_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+.contact_wrapper_left > .address {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.contact_wrapper_left > .telephone {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.contact_wrapper_left > .email {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.contact_wrapper_left > .map {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+}
+.contact_wrapper_right > .address {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.contact_wrapper_right > .telephone {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.contact_wrapper_right > .email {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.contact_wrapper_right > .map {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+}
+.contact_wrapper > div:not(:last-child) {
+    background-color: white;
+    border: 1px solid lightgray;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* align-items: center; */
+    justify-items: center;
+    color: #212529;
+    border-radius: 0.5em;
+}
+.contact_wrapper > div:not(:last-child):hover {
+    border: 1px solid rgb(97, 138, 73);
+    transition: 0.5s;
+}
+.contact_wrapper > div:not(:last-child) > h3 {
+    margin: 0.5em;
+    color: rgb(97, 138, 73);
+}
+.contact_wrapper > div:not(:last-child) > p {
+    margin: 0 0.5em 0.5em 0.5em;
+}
+.contact_wrapper > .telephone {
+    font-size: 120%;
+}
+.contact_wrapper > .map > img {
+    width: 100%;
+    border-radius: 0.5em;
+}
+.mapouter {
+    /* position: relative; */
+    /* text-align: right; */
+    height: 100%;
+    width: 100%;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 100%;
+    width: 100%;
+}
+.gmap_canvas > iframe {
+    border: 1px solid lightgray;
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
+}
+.gmap_canvas > iframe:hover {
+    border: 1px solid rgb(97, 138, 73);
+    transition: 0.5s;
+}
+/* Ninja form */
+.ninja-forms-field {
+    border: 1px solid lightgray!important;
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+.ninja-forms-field:hover {
+    border: 1px solid rgb(97, 138, 73)!important;
+    transition: .5s;
+}
+.ninja-forms-field:focus {
+    border: 1px solid rgb(97, 138, 73)!important;
+    outline: none!important;
+}
+
+/* 04e. LEGAL / INFORMATION PAGES */
+.imprint_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+.imprint_info {
+    grid-column: 1 / 2;
+}
+.imprint_slider {
+    grid-column: 2 / 4;
+}
+
+
+/* 05. WOOCOMMERCE */
+/* 05a. Single product */
+.product {
+    margin-bottom: 4em;
+}
+.cbt_single_product_img {
+    width: 100%!important;
+    height: auto;
+}
+.woocommerce-product-gallery__trigger {
+    display: none;
+}
+.cbt_single_product_wrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+.cbt_single_product_wrapper > .summary {
+    text-align: right;
+}
+.cbt_single_product_wrapper .product_meta {
+    display: none;
+}
+.woocommerce-tabs {
+    margin-top: 4em;
+}
+ul.wc-tabs {
+    list-style-type: none;
+    margin: 1.2em 0 0.8em 0;
+    padding: 0;
+}
+ul.wc-tabs > li > a {
+    padding: 1em;
+    background-color: rgb(97, 138, 73);
+    border-radius: 0.5em 0.5em 0 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#tab-description {
+    border: 1px solid lightgray;
+    padding: 1em;
+    border-radius: 0 0.5em 0.5em 0.5em;
+}
+#tab-description > h2:first-child {
+    display: none;
+}
+
+/* 05b. Checkout */
+.cbt_checkout_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+.woocommerce form .form-row {
+    width: 100%!important;
+}
+.woocommerce-input-wrapper {
+    display: contents;
+}
+.woocommerce form .form-row input.input-text, 
+.woocommerce form .form-row textarea {
+    width: 100%!important;
+    font-size: 1em;
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    padding: 0.4em;
+}
+.woocommerce form .form-row input.input-text:hover, 
+.woocommerce form .form-row textarea:hover {
+    transition: 0.5s;
+    border: 1px solid rgb(97, 138, 73);
+}
+
+
+/* RESPONSIVE WITH BOOTSTRAP */
+/* Screen < 1200px */
+@media(max-width:1199px) {
+}
+
+/* Screen < 992px */
+@media(max-width:991px) {
+    /* 02b. SLIDER / VIDEO */
+    #hero {
+        min-height: 50vw;
+        height: auto;
+    }
+    .hero_container > img {
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        display: block;
+    }
+    #hero video {
+        display: none;
+    }
+    #hero .carousel-caption {
+        bottom: 28%!important;
+        /* left: 20%!important;
+        right: 20%!important; */
+    }
+    .hero_caption > h1 {
+        font-size: 150%;
+        font-weight: bold;
+        margin: 0.5em;
+    }
+    .hero_caption a {
+        padding: .3rem 1.3rem!important;
+    }
+
+    /* 03b. Footer bar */
+    .footer_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5em;
+    }
+    .footer_wrapper > div {
+        font-size: 80%;
+    }
+
+    /* 04a. FRONT PAGE / HOME PAGE */
+    /* 04a.2. Introduction */
+    .intro_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.2em;
+    }
+    .intro_wrapper > .intro_text_title {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        /* font-size: 120%; */
+    }
+    .intro_wrapper > .intro_text_content {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        font-size: 100%;
+    }
+    .intro_wrapper > .intro_social_links {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        text-align: right;
+    }
+    .intro_wrapper > .intro_slider {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    /* 04a.3. Offer services */
+    .offer_services_wrapper {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .offer_services_wrapper > div {
+        grid-template-rows: 4em 2em auto;
+    }
+    .offer_service1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+    .offer_service2 {
+        grid-row: 1 / 2;
+        grid-column: 3 / 5;
+    }
+    .offer_service3 {
+        grid-row: 1 / 2;
+        grid-column: 5 / 7;
+    }
+    .offer_service4 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 4;
+    }
+    .offer_service5 {
+        grid-row: 2 / 3;
+        grid-column: 4 / 6;
+    }
+
+    /* 04a.4. E-Bike */
+    .ebike_description_wrapper {
+        gap: 1em;
+    }
+
+    /* 04a.5. Accessories */
+    .accessories_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* 04a.7. Premium services */
+    .premium_service_wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 1em;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .premium_service_wrapper > div {
+        width: 100%;
+        grid-template-columns: 7em auto;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+    .premium_service_wrapper > div > p:last-child {
+        text-align: justify;
+    }
+
+    /* 04c. CONTACT PAGE*/
+    .contact_wrapper {
+        gap: 1em;
+    }
+    .contact_wrapper_left > .address {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_left > .telephone {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_left > .email {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_left > .map {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+    .contact_wrapper_right > .address {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_right > .telephone {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_right > .email {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_right > .map {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
+    /* 05a. Single product */
+    .cbt_single_product_wrapper {
+        grid-template-columns: 1fr 2fr;
+        gap: 1em;
+    }
+}
+
+/* Screen < 768px */
+@media(max-width:767px) {
+    /* 02b. SLIDER / VIDEO */
+    #hero .carousel-caption {
+        bottom: 20%!important;
+        /* left: 20%!important;
+        right: 20%!important; */
+    }
+    .hero_caption > h1 {
+        font-size: 150%;
+        font-weight: bold;
+        margin: 0.5em;
+    }
+    .hero_caption a {
+        padding: .3rem 1.3rem!important;
+    }
+
+    /* 04a.3. Offer services */
+    .offer_services_wrapper > div {
+        grid-template-rows: 4em 3em auto;
+    }
+
+    /* 04a.5. Accessories */
+    .accessories_wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* 04e. LEGAL / INFORMATION PAGES */
+    .imprint_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .imprint_info {
+        grid-column: 1 / 2;
+    }
+    .imprint_slider {
+        grid-column: 1 / 2;
+    }
+
+    /* 05a. Single product */
+    .cbt_single_product_wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
+    }
+    .cbt_single_product_wrapper > div:last-child {
+        grid-row: 1 / 2;
+    }
+    .cbt_single_product_wrapper > div:first-child {
+        grid-row: 2 / 3;
+    }
+    /* 05b. Checkout */
+    .cbt_checkout_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+    }
+}
+
+/* Screen <= 576px */
+@media(max-width:576px) {
+    /* 01. GLOBAL */
+    p {
+        font-size: 90%;
+    }
+    .margin_to_top {
+        margin-top: 5em;
+    }
+    .page_wrapper > .section_wrapper:not(:first-child) {
+        padding: 1em 0;
+    }
+    .section_wrapper > .container > h1 {
+        font-size: 150%;
+    }
+
+    /* 02a. NAVIGATION BAR */
+    .navbar-brand {
+        font-size: 1.35em;
+    }
+    .navbar-brand > img {
+        max-width: 1.2em;
+    }
+    #menu-hauptmenue li a {
+        font-size: 1em;
+    }
+    .navbar_toggler_container {
+        box-sizing: border-box;
+        padding: .3125rem 0 .3125rem 0;
+    }
+    .navbar-toggler {
+        font-size: 1em;
+        padding: .25rem 1.6rem!important;
+    }
+
+    /* 02b. SLIDER / VIDEO */
+    #hero .carousel-caption {
+        bottom: 15%!important;
+    }
+    .hero_caption > h1 {
+        font-size: 95%;
+        font-weight: bold;
+        margin: 0.2em;
+    }
+    .hero_caption a {
+        font-size: 70%;
+        padding: .1rem .7rem!important;
+    }
+
+    /* 03a. Banner */
+    .footer_banner_wrapper {
+        padding: 4em 1em;
+    }
+    .footer_banner_wrapper > h3 {
+        font-size: 95%;
+    }
+    .footer_banner_wrapper a {
+        font-size: 70%;
+        padding: .1rem .7rem!important;
+    }
+    
+    /* 03b. Footer bar */
+    footer {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+    .footer_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 0.5em;
+    }
+    .footer_wrapper > div {
+        font-size: 70%;
+        padding-bottom: 0.5em;
+    }
+    .footer_wrapper > div:not(:last-child) {
+        border-bottom: 1px dashed rgb(87, 87, 87);
+    }
+    .footer_wrapper > div > h6 {
+        font-size: 110%;
+    }
+    .footer_wrapper  > .address {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .footer_wrapper  > .contact_info {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .footer_wrapper  > .footer_menu {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .footer_wrapper  > .payment_method {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .footer_wrapper  > .social_network {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    
+    /* 04a. FRONT PAGE / HOME PAGE */
+    /* 04a.2. Introduction */
+    .intro_wrapper {
+        gap: 0.5em;
+    }
+    .intro_wrapper > .intro_text_title {
+        /* font-size: 100%; */
+    }
+    .intro_wrapper > .intro_text_content {
+        font-size: 90%;
+    }
+
+    /* 04a.3. Offer services */
+    .offer_services_wrapper {
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .offer_services_wrapper > div {
+        grid-template-rows: 4em 2em auto;
+    }
+    .offer_service1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    .offer_service2 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+    .offer_service3 {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    .offer_service4 {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+    .offer_service5 {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+
+    /* 04a.4. E-Bike */
+    .ebike_description_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5em;
+        margin: 4em 0 0 0;
+    }
+
+    /* 04a.5. Accessories */
+    .accessories_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 04d. CONTACT PAGE*/
+    .contact_wrapper {
+        grid-template-columns: 1fr;
+        gap: 0.5em;
+    }
+    .contact_wrapper_left > .address {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_left > .telephone {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .contact_wrapper_left > .email {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .contact_wrapper_left > .map {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .contact_wrapper_right > .address {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .contact_wrapper_right > .telephone {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .contact_wrapper_right > .email {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .contact_wrapper_right > .map {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .contact_wrapper > div > h3 {
+        font-size: 120%;
+    }
+    .contact_wrapper > div > p {
+        font-size: 1em;
+    }
+    /* Ninja form */
+    .nf-form-title > h3 {
+        font-size: 120%;
+    }
+    .nf-form-fields-required {
+        font-size: 0.8em;
+    }
+    .nf-field-label {
+        margin-bottom: 0.2em!important;
+    }
+    #ninja_forms_required_items, .nf-field-container {
+        margin-bottom: 0.5em!important;
+    }
+
+    /* 04e. LEGAL / INFORMATION PAGES */
+    .imprint_wrapper {
+        gap: 0.5em;
+    }
+}
+
+/* Screen <= 480px */
+@media(max-width:480px) {
+    /* 02a. NAVIGATION BAR */
+    .navbar-brand {
+        font-size: 1.1em;
+    }
+    .navbar-brand > img {
+        max-width: 1.1em;
+    }
+    #menu-hauptmenue li a {
+        font-size: .9em;
+    }
+    .navbar_toggler_container {
+        box-sizing: border-box;
+        padding: .3125rem 0 .3125rem 0;
+    }
+    .navbar-toggler {
+        font-size: .9em;
+        padding: .15rem 1.2rem!important;
+    }
+}
+
+/* Screen <= 320px */
+@media(max-width:320px) {
+    /* 02b. SLIDER / VIDEO */
+    #hero .carousel-caption {
+        bottom: 12%!important;
+    }
+    .hero_caption > h1 {
+        font-size: 90%;
+        font-weight: bold;
+        margin: 0.1em;
+    }
+    .hero_caption a {
+        font-size: 65%;
+        padding: .08rem .6rem!important;
+    }
+}
