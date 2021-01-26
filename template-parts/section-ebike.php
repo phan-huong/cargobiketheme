@@ -24,8 +24,8 @@ $ebike_enable = get_theme_mod('ebike_enable', true);
             <!-- Thumbnails -->
             <ol class="carousel-indicators list-inline">
                 <li class="list-inline-item active"><a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/img/bike1.jpg" class="img-fluid"></a></li>
-                <li class="list-inline-item"><a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/img/epic0-lg.jpg'" class="img-fluid"></a></li>
-                <li class="list-inline-item"><a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/img/correct-bike.jpg'" class="img-fluid"></a></li>
+                <li class="list-inline-item"><a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/img/epic0-lg.jpg" class="img-fluid"></a></li>
+                <li class="list-inline-item"><a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/img/correct-bike.jpg" class="img-fluid"></a></li>
             </ol>
         </div>
         <div class="ebike_description_wrapper">

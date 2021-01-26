@@ -474,33 +474,33 @@ footer {
 }
 
 /* 04a.4. E-Bike */
-#custCarousel .carousel-inner {
+.custCarousel > .carousel-inner {
     border-radius: 0.5em;
 }
-#custCarousel .carousel-inner img {
+.custCarousel > .carousel-inner img {
     width: 100%;
     height: 100%
 }
-#custCarousel .carousel-indicators {
+.custCarousel > .carousel-indicators {
     position: static;
     margin-top: 0
 }
-#custCarousel .carousel-indicators>li {
+.custCarousel > .carousel-indicators>li {
     width: 7em
 }
-#custCarousel .carousel-indicators li img {
+.custCarousel > .carousel-indicators li img {
     border-radius: 0.2em;
     display: block;
     opacity: 0.7
 }
-#custCarousel .carousel-indicators li.active img {
+.custCarousel > .carousel-indicators li.active img {
     opacity: 1
 }
-#custCarousel .carousel-indicators li:hover img {
+.custCarousel > .carousel-indicators li:hover img {
     opacity: 0.85
 }
 .carousel-item img {
-    width: 80%
+    width: 100%
 }
 .ebike_description_wrapper {
     display: grid;
@@ -551,6 +551,9 @@ footer {
     font-size: 85%;
     font-weight: 600;
     font-style: italic;
+}
+.ver_container {
+    
 }
 
 /* 04a.5. Accessories */

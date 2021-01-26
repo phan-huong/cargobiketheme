@@ -16,12 +16,20 @@
     <!-- End offer services -->
 
     <!-- Start E-Bike -->
-    <?php get_template_part( 'template-parts/section', 'ebike' ); ?>
+    <?php //get_template_part( 'template-parts/section', 'ebike' ); ?>
     <!-- End E-Bike -->
     
     <!-- Start accessories -->
-    <?php get_template_part( 'template-parts/section', 'accessories' ); ?>
+    <?php //get_template_part( 'template-parts/section', 'accessories' ); ?>
     <!-- End accessories -->
+
+    <!-- Start Bike -->
+    <?php get_template_part( 'template-parts/section', 'bike' ); ?>
+    <!-- End Bike -->
+
+    <!-- Start Equipment -->
+    <?php get_template_part( 'template-parts/section', 'equipment' ); ?>
+    <!-- End Equipment -->
 
     <!-- Start special features -->
     <?php get_template_part( 'template-parts/section', 'special-features' ); ?>
