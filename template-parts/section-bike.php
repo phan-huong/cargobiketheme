@@ -192,12 +192,12 @@ $ebike_enable = get_theme_mod('ebike_enable', true);
                                 <td>30,00 €</td>
                             </tr>
                             <tr>
-                                <th>Danach per day</th>
+                                <th>Danach pro Tag</th>
                                 <td>3,00 €</td>
                                 <td>7,50 €</td>
                             </tr>
                             <tr>
-                                <th>Ab 7 Tagen per day</th>
+                                <th>Ab 7 Tagen pro Tag</th>
                                 <td>2,00 €</td>
                                 <td>6,50 €</td>
                             </tr>
